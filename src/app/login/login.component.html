@@ -1,0 +1,51 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100 ">
+  <div class="form-wrapper glow-border p-1 rounded-4">
+    <div class="card p-4 rounded-4 border-0">
+      <h2 class="text-center mb-4 text-primary">Login</h2>
+      <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            [(ngModel)]="credentials.email"
+            required
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            [(ngModel)]="credentials.password"
+            required
+            placeholder="Enter your password"
+          />
+        </div>
+
+        <!-- Role -->
+        <div class="mb-3">
+          <label class="form-label">Role</label>
+          <select
+            name="role"
+            class="form-select"
+            [(ngModel)]="credentials.role"
+            required
+          >
+            <option value="USER">User</option>
+            <option value="PARTNER">Partner</option>
+          </select>
+        </div>
+
+        <!-- Submit -->
+        <button class="btn btn-primary w-100">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

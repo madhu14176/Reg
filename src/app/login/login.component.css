@@ -1,0 +1,29 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+#rememberMe {
+  border: 2px solid gray;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.form-wrapper {
+  position: relative;
+  padding: 10px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.form-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 20px;
+  border-style: groove;
+  filter: blur(8px);
+  animation: borderGlow 6s ease infinite;
+  z-index: -1;
+  opacity: 0.9;
+}
+
